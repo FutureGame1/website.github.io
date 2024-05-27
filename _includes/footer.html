@@ -1,0 +1,14 @@
+<div class="footerWrap">
+  <footer class="footer">
+    <ul class="footer__items">
+      {% for item in site.footer_nav %}
+      <li class="footer__item">
+        <a href="{{ item[1] }}" {% if item[1] contains "://" %}{% unless item[1] contains "siteleaf.com" %}rel="me"{% endunless %}{% endif %} class="footer__link">{{ item[0] }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    <div>
+      <p>Copyright © 2023-2024 Future Game. All rights reserved.</p>
+   </div>
+  </footer>
+</div>
